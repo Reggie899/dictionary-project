@@ -1,13 +1,21 @@
 import React, {useEffect, useState, useContext} from "react";
 import './App.css';
+import axios from "axios";
 
 export default function Dictionary1(props) {
 const [keyword, setKeyword] = useState("");
 
+function handleResponse(response) {
+    console.log(response);
+
+} 
+
 function search(event) {
     event.preventDefault();
-    setKeyword(event);
-}
+alert(`Searching for ${keyword} defnition`)}
+
+let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en_US/${keyword}`;
+axios.get(apiUrl).then(handleResponse);
 
 
     return (
@@ -18,6 +26,7 @@ function search(event) {
 
         <form
           id="biggerForm SearchSection"
+          onSubmit={search}
         //   onChange={(e) => {
         //     e.preventDefault();
             // setKeyword(e.target.value);
