@@ -1,12 +1,16 @@
 import React, {useEffect, useState, useContext} from "react";
 import './App.css';
 import axios from "axios";
+import Result from "./Result"
 
 export default function Dictionary1(props) {
 const [keyword, setKeyword] = useState("");
+let [result, setResult] = useState(null);
 
 function handleResponse(response) {
     console.log(response.data);
+    console.log(response.data[0].meanings[0].definitions[0].definition);
+setResult(response.data[0]);
 
 } 
 
@@ -64,7 +68,7 @@ axios.get(apiUrl).then(handleResponse);
             </div>
 
         </form>
-
+<Result result={result}/>
         <div>
         </div>
       </div>
