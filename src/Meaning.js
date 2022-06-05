@@ -11,7 +11,7 @@ export default function Meaning(props) {
             <p>
               {definition.definition}
               <br />
-              <em>{definition.example}</em>
+              <div style={{fontWeight: "bold", color: "purple"}} >{definition.example}</div >
             </p>
           </div>
         );
