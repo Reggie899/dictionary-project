@@ -68,29 +68,28 @@ export default function Dictionary1(props) {
                 id="bigButton"
                 value="🔎"
               />
-              {/* </div> */}
             </div>
           </form>
         </section>
         {noResult ? (
-          <h2 style={{ color: "white", marginLeft: "10%"}}>Sorry, not found 💀 </h2>
+          <h2 style={{ color: "white", marginLeft: "10%" }}>
+            Sorry, word was not found 💀{" "}
+          </h2>
         ) : (
           <Result result={result} />
         )}
-       
       </div>
       <footer>
-      <div style={{display: "flex", justifyContent: "center"}}>
-        <div style={{margin: "10%", borderRadius: "50%", width: "90px", height: "90px", border: "2px solid magenta", display: "flex", justifyContent: "center", alignItems: "center"}}
->
-          <a
-            href="https://github.com/Reggie899/dictionary-project/tree/master/src"
-            target="_blank"
-            style={{fontSize: "1em", fontWeight: "bolder", padding: "3%"}}
-          >
-            My code
-          </a>
-        </div>
+        <div style={{ textAlign: "center" }}>
+          <div>
+            <a
+              href="https://github.com/Reggie899/dictionary-project/tree/master/src"
+              target="_blank"
+              style={{ fontSize: "1em", fontWeight: "bolder", padding: "3%" }}
+            >
+              My code
+            </a>
+          </div>
         </div>
       </footer>
     </div>
