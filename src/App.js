@@ -17,7 +17,7 @@ const startDict = () => {
   return (
     <div className="App">
      {start ? <Dictionary1 setStart={setStart}/> : <Dictionary2/> }
-<button onClick={() => startDict()}>Here</button>
+{/* <button onClick={() => startDict()}>Here</button> */}
     </div>
   );
 }

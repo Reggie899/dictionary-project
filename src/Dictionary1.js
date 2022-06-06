@@ -70,6 +70,8 @@ axios.get(apiUrl).then(handleResponse);
         </form>
 <Result result={result}/>
         <div>
+
+        MY GITHUB: <a href="https://github.com/Reggie899/dictionary-project/tree/master/src" target="_blank">Here</a>
         </div>
       </div>
       </div>
