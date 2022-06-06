@@ -19,6 +19,7 @@ export default function Dictionary1(props) {
     // alert(`Searching for ${keyword} defnition`)
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en_US/${keyword}`;
     axios.get(apiUrl).then(handleResponse);
+    
   }
 
   return (
@@ -31,7 +32,6 @@ export default function Dictionary1(props) {
         <div className="tilted">y</div>
       </h1>
       <div className="SearchSection">
-        {/* {keyword} */}
         <section>
           <form
             id="biggerForm SearchSection"
