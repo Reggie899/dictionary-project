@@ -8,6 +8,7 @@ export default function Dictionary1(props) {
   const [keyword, setKeyword] = useState("");
   let [result, setResult] = useState(null);
   const [noResult, setNoResult] = useState(false);
+  const [failedWord, setFailedWord] = useState("");
 
   function handleResponse(response) {
     setNoResult(false);
@@ -23,7 +24,7 @@ export default function Dictionary1(props) {
     axios
       .get(apiUrl)
       .then(handleResponse)
-      .catch((err) => setNoResult(true));
+      .catch((err) => setNoResult(true), setFailedWord(keyword));
   }
 
   return (
@@ -73,7 +74,7 @@ export default function Dictionary1(props) {
         </section>
         {noResult ? (
           <h2 style={{ color: "white", marginLeft: "10%" }}>
-            Sorry, word was not found 💀{" "}
+            Sorry, <span style={{color: "magenta"}}>{failedWord}</span> was not found 💀{" "}
           </h2>
         ) : (
           <Result result={result} />

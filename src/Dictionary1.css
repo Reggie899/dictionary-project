@@ -1,3 +1,14 @@
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+}
+
 section {
   color: white;
   background-color: black;
@@ -8,6 +19,7 @@ section {
 .borderMagenta {
   border: 7px solid magenta;
   border-radius: 15px;
+  text-align: left;
 }
 
 form {
@@ -55,4 +67,18 @@ footer a {
 
 footer a:hover {
     color: magenta;
+}
+
+
+@media only screen and (min-width: 768px) {
+section:first-of-type {
+    margin-top: 0;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+}
+section {
+    min-width: 70vw;
+    max-width: 70vw;
+}
 }

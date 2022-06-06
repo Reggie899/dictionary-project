@@ -6,11 +6,11 @@ export default function Phonetic(props) {
 
   if (props.phonetic.text) {
     return (
-      <div style={{ display: "flex", justifyContent: "center", margin: "6%" }}>
+      <div style={{ display: "flex", justifyContent: "center", marginTop: "0%", color: "white" }}>
         {props.phonetic.audio.length > 0 ? (
           <div>
             <br />
-            <div style={{ margin: "2%" }}>{props.phonetic.text}</div>
+            <div style={{ marginTop: "10%" }}>{props.phonetic.text}</div>
             <br />
             <audio
               src={props.phonetic.audio}

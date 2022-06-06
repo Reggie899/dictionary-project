@@ -1,5 +1,4 @@
 import React, {useEffect, useState, useContext} from "react";
-import axios from "axios";
 import Dictionary1 from "./Dictionary1";
 import Dictionary2 from "./Dictionary2";
 import './App.css';

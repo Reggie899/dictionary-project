@@ -3,7 +3,7 @@ import React from "react";
 export default function Synonyms(props) {
     if (props.synonyms.length > 0) { 
   return (
-      <div style={{color: "green"}}>
+      <div style={{color: "limegreen"}}>
        Synonyms: 
 <ul className="synonyms">
 {props.synonyms.map(function (synonym, index) {
