@@ -5,13 +5,12 @@ export default function Phonetic(props) {
     console.log("AUDIO" , props.phonetic.audio)
 
   return (
-      <div>
-{/* <a href={props.phonetic.audio} target="_blank">
-    Listen
-</a> */}
+      <div style={{display: "flex", justifyContent: "center", margin: "6%"}}>
 <br/>
+<div style={{margin: "2%"}}>
 {props.phonetic.text}
-{/* <audio src="https://api.dictionaryapi.dev/media/pronunciations/en/bull-us.mp3" type="audio/mpeg" controls> */}
+</div>
+<br/>
 <audio src={props.phonetic.audio} type="audio/mpeg" controls>
 </audio>
       </div>
