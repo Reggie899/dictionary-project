@@ -45,7 +45,7 @@ axios.get(apiUrl).then(handleResponse);
 
           <input
             type="search"
-            placeholder="Enter city here..."
+            placeholder="Enter word here 🔍"
             className="form-control"
             id="bigForm"
             // autofocus="on"
