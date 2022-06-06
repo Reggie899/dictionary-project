@@ -1,12 +1,13 @@
 
 body {
-  background-color: rgba(174, 110, 142, 0.611);;
+  /* background-color: rgba(174, 110, 142, 0.611);; */
+  background-color: black;
 }
 
 .dictionaryh1 {
 margin-top: 20%;
 font-size: 4em;
-color: black;
+color: white;
 font-weight: bold;
 border: 3px solid green;
 width: 100%; 
@@ -15,12 +16,6 @@ flex-shrink: initial;
 justify-content: center;
 }
 
-.tilted {
-  transform: rotate(30deg);
-  color: rgba(174, 110, 142, 0.611);
-  margin-top: 4%;
-}
 
-.biggerForm {
-  background-color: blue;
-}
+
+
