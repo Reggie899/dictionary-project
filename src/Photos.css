@@ -1,0 +1,14 @@
+img {
+  margin: 5%;
+}
+
+.row {
+  /* border: 3px solid green; */
+  display: flex;
+  justify-content: center;
+}
+
+.photoContainer {
+  /* border: 7px solid magenta; */
+  margin-top: 18%;
+}

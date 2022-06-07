@@ -4,7 +4,7 @@ import Meaning from "./Meaning";
 import Phonetic from "./Phonetic";
 
 export default function Result(props) {
-  console.log("Result", props.result);
+  // console.log("Result", props.result);
   if (props.result) {
     return (
       <div className="Results">
@@ -17,13 +17,14 @@ export default function Result(props) {
         {props.result.meanings.map(function (meaning, index) {
           return (
             <div
+            key={index}
               style={{
                 display: "flex",
                 justifyContent: "center",
                 marginBottom: "5%"
               }}
             >
-              <section className="borderMagenta meaningSection" key={index}>
+              <section className="borderMagenta meaningSection">
                 <Meaning meaning={meaning} />
               </section>{" "}
             </div>
@@ -31,8 +32,8 @@ export default function Result(props) {
         })}
           {props.result.phonetics.map(function (phonetic, index) {
             return (
-              <section className="phoneticSection">
-              <div key={index}>
+              <section className="phoneticSection"  key={index}>
+              <div>
                 <Phonetic phonetic={phonetic} />
               </div>
               </section>

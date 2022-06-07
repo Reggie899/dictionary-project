@@ -3,18 +3,25 @@ import "./App.css";
 import "./Dictionary.css";
 import axios from "axios";
 import Result from "./Result";
+import Photos from "./Photos";
 
-export default function Dictionary1(props) {
+export default function Dictionary() {
   const [keyword, setKeyword] = useState("");
   const [result, setResult] = useState(null);
   const [noResult, setNoResult] = useState(false);
   const [failedWord, setFailedWord] = useState("");
+  const [photos, setPhotos] = useState(null);
 
-  function handleResponse(response) {
+  function handleDictionaryResponse(response) {
     setNoResult(false);
-    console.log(response.data);
-    console.log(response.data[0].meanings[0].definitions[0].definition);
+    // console.log(response.data);
+    // console.log(response.data[0].meanings[0].definitions[0].definition);
     setResult(response.data[0]);
+  }
+
+  function handlePexelsResponse(response) {
+    console.log("PEXELS", response.data.photos);
+    setPhotos(response.data.photos);
   }
 
   function search(event) {
@@ -22,8 +29,14 @@ export default function Dictionary1(props) {
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en_US/${keyword}`;
     axios
       .get(apiUrl)
-      .then(handleResponse)
+      .then(handleDictionaryResponse)
       .catch((err) => setNoResult(true), setFailedWord(keyword));
+
+    let pexelsApiKey =
+      "563492ad6f91700001000001c7580de00b32486aa0887a911d91d3fe";
+    let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=6`;
+    let headers = { Authorization: `Bearer ${pexelsApiKey}` };
+    axios.get(pexelsApiUrl, { headers: headers }).then(handlePexelsResponse);
   }
 
   return (
@@ -37,7 +50,7 @@ export default function Dictionary1(props) {
       </h1>
       <div className="SearchSection">
         <section className="formSection">
-          <form  onSubmit={search}>
+          <form onSubmit={search}>
             <div className="col-8">
               <input
                 type="search"
@@ -58,7 +71,10 @@ export default function Dictionary1(props) {
             not found 💀{" "}
           </h2>
         ) : (
-          <Result result={result} />
+          <div>
+            <Result result={result} />
+            <Photos photos={photos} />
+          </div>
         )}
       </div>
       <footer>

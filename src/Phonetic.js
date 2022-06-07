@@ -1,8 +1,8 @@
 import React from "react";
 
 export default function Phonetic(props) {
-  console.log("PHONNNN", props.phonetic);
-  console.log("AUDIO", props.phonetic.audio.length);
+  // console.log("PHONNNN", props.phonetic);
+  // console.log("AUDIO", props.phonetic.audio.length);
 
   if (props.phonetic.text) {
     return (
