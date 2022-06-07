@@ -1,0 +1,168 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.h2Section,
+.meaningSection {
+  color: white;
+  background-color: black;
+  margin: 10%;
+  padding: 3%;
+}
+
+.formSection {
+  color: white;
+  background-color: black;
+  margin: 6%;
+  padding: 3%;
+}
+
+.phoneticSection {
+  margin-top: -30px;
+  margin-bottom: 30px;
+}
+
+.borderMagenta {
+  border: 7px solid magenta;
+  border-radius: 15px;
+  text-align: left;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  /* justify-content: end; */
+  /* border: 7px solid magenta; */
+}
+
+.tilted {
+  transform: rotate(30deg);
+  /* color: rgba(174, 110, 142, 0.611); */
+  color: white;
+  margin-top: 4%;
+}
+
+#bigButton {
+  background-color: magenta;
+  padding: 6%;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  font-size: 2em;
+}
+
+.col-4 {
+  display: flex;
+  justify-content: end;
+}
+
+h2 {
+  font-size: 4em;
+}
+
+footer {
+  /* border: 1px solid magenta; */
+  margin: 63% 0 13% 0;
+}
+
+footer a {
+  /* border: 1px solid magenta; */
+  color: white;
+  font-size: 1em;
+  font-weight: bolder;
+  padding: 3%;
+}
+
+footer a:hover {
+  color: magenta;
+}
+
+@media only screen and (min-width: 400px) {
+  .formSection {
+margin: 10%;  }
+}
+
+@media only screen and (min-width: 768px) {
+  form {
+    width: 70%;
+  }
+  .formSection {
+    /* border: 2px solid white; */
+    display: flex;
+justify-content: center;  }
+  .col-4 {
+    justify-content: center;
+  }
+  .meaningSection {
+    min-width: 70vw;
+    max-width: 70vw;
+  }
+  .h2Section {
+    margin-bottom: -2%;
+  }
+  footer {
+    margin-top: 20%;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .meaningSection {
+   margin-top: -1%;
+  }
+  .h2Section {
+    margin-top: -10%;
+    margin-bottom: 6%;
+
+  }
+}
+
+@media only screen and (min-width: 830px) {
+  .meaningSection {
+    min-width: 60vw;
+    max-width: 60vw;
+  }
+}
+
+@media only screen and (min-width: 922px) {
+  .col-4 {
+    /* margin-left: -5%; */
+    justify-content: center;
+  }
+  .formSection {
+        /* border: 2px solid white; */
+margin-top: 4%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .col-4 {
+    margin-left: 0%;
+    justify-content: center;
+  }
+  .col-8 {
+    display: flex;
+    justify-content: end;
+  }
+  #form {
+    width: 70%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .col-4 {
+    margin-left: -3%;
+    justify-content: center;
+  }
+  .meaningSection {
+   margin-top: -3%;
+  }
+  .formSection {
+    margin-top: 5%;
+  }
+}

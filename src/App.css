@@ -5,17 +5,42 @@ body {
 }
 
 .dictionaryh1 {
-margin-top: 20%;
+margin-top: 30%;
 font-size: 4em;
 color: white;
 font-weight: bold;
-border: 3px solid green;
+/* border: 3px solid green; */
 width: 100%; 
 display: flex;
 flex-shrink: initial;
 justify-content: center;
 }
 
+@media only screen and (min-width: 500px) {
+  .dictionaryh1{
+    font-size: 5em;
 
+  }
+}
 
+@media only screen and (min-width: 768px) {
+  .dictionaryh1{
+    font-size: 6em;
+margin-top: 23%;
+  }
+}
 
+@media only screen and (min-width: 800px) {
+  .dictionaryh1{
+    margin-top: 14%;
+
+  }
+}
+
+@media only screen and (min-width: 922px) {
+  .dictionaryh1{
+    font-size: 8em;
+    margin-top: 10%;
+
+  }
+}

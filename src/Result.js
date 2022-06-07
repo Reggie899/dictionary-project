@@ -8,7 +8,7 @@ export default function Result(props) {
   if (props.result) {
     return (
       <div className="Results">
-        <section>
+        <section className="h2Section">
           <h2 style={{ display: "flex", justifyContent: "center" }}>
             {" "}
             {props.result.word}{" "}
@@ -23,7 +23,7 @@ export default function Result(props) {
                 marginBottom: "5%"
               }}
             >
-              <section className="borderMagenta" key={index}>
+              <section className="borderMagenta meaningSection" key={index}>
                 <Meaning meaning={meaning} />
               </section>{" "}
             </div>
@@ -31,9 +31,11 @@ export default function Result(props) {
         })}
           {props.result.phonetics.map(function (phonetic, index) {
             return (
+              <section className="phoneticSection">
               <div key={index}>
                 <Phonetic phonetic={phonetic} />
               </div>
+              </section>
             );
           })}
       </div>

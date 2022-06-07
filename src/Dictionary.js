@@ -1,12 +1,12 @@
 import React, { useEffect, useState, useContext } from "react";
 import "./App.css";
-import "./Dictionary1.css";
+import "./Dictionary.css";
 import axios from "axios";
 import Result from "./Result";
 
 export default function Dictionary1(props) {
   const [keyword, setKeyword] = useState("");
-  let [result, setResult] = useState(null);
+  const [result, setResult] = useState(null);
   const [noResult, setNoResult] = useState(false);
   const [failedWord, setFailedWord] = useState("");
 
@@ -19,7 +19,6 @@ export default function Dictionary1(props) {
 
   function search(event) {
     event.preventDefault();
-    // alert(`Searching for ${keyword} defnition`)
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en_US/${keyword}`;
     axios
       .get(apiUrl)
@@ -37,44 +36,26 @@ export default function Dictionary1(props) {
         <div className="tilted">y</div>
       </h1>
       <div className="SearchSection">
-        <section>
-          <form
-            id="biggerForm SearchSection"
-            onSubmit={search}
-            //   onChange={(e) => {
-            //     e.preventDefault();
-            // setKeyword(e.target.value);
-            //    props.setStart(false);
-            // {/* <input type="search" /> */}
-            // alert("test");
-            //   }}
-          >
+        <section className="formSection">
+          <form  onSubmit={search}>
             <div className="col-8">
               <input
                 type="search"
                 placeholder="Enter word here... 👀"
                 className="form-control"
-                id="bigForm"
-                // autofocus="on"
-                // autocomplete="on"
-                // onChange={(e) => setTest(e.target.value)}
+                id="form"
                 onChange={(e) => setKeyword(e.target.value)}
               />
             </div>
             <div className="col-4">
-              {/* <div className="searchButton"> */}
-              <input
-                type="submit"
-                // className="btn btn-light"
-                id="bigButton"
-                value="🔎"
-              />
+              <input type="submit" id="bigButton" value="🔎" />
             </div>
           </form>
         </section>
         {noResult ? (
           <h2 style={{ color: "white", marginLeft: "10%" }}>
-            Sorry, <span style={{color: "magenta"}}>{failedWord}</span> was not found 💀{" "}
+            Sorry, <span style={{ color: "magenta" }}>{failedWord}</span> was
+            not found 💀{" "}
           </h2>
         ) : (
           <Result result={result} />
@@ -86,7 +67,6 @@ export default function Dictionary1(props) {
             <a
               href="https://github.com/Reggie899/dictionary-project/tree/master/src"
               target="_blank"
-              style={{ fontSize: "1em", fontWeight: "bolder", padding: "3%" }}
             >
               My code
             </a>
