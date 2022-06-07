@@ -88,10 +88,10 @@ footer a:hover {
   color: magenta;
 }
 
-
 @media only screen and (min-width: 400px) {
   .formSection {
-margin: 10%;  }
+    margin: 10%;
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -101,7 +101,8 @@ margin: 10%;  }
   .formSection {
     /* border: 2px solid white; */
     display: flex;
-justify-content: center;  }
+    justify-content: center;
+  }
   .col-4 {
     justify-content: center;
   }
@@ -115,12 +116,11 @@ justify-content: center;  }
 
 @media only screen and (min-width: 800px) {
   .meaningSection {
-   margin-top: -1%;
+    margin-top: -1%;
   }
   .h2Section {
     margin-top: -10%;
     margin-bottom: 6%;
-
   }
 }
 
@@ -137,8 +137,8 @@ justify-content: center;  }
     justify-content: center;
   }
   .formSection {
-        /* border: 2px solid white; */
-margin-top: 4%;
+    /* border: 2px solid white; */
+    margin-top: 4%;
   }
 }
 
@@ -162,7 +162,7 @@ margin-top: 4%;
     justify-content: center;
   }
   .meaningSection {
-   margin-top: -3%;
+    margin-top: -3%;
   }
   .formSection {
     margin-top: 5%;

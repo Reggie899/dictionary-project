@@ -17,11 +17,11 @@ export default function Result(props) {
         {props.result.meanings.map(function (meaning, index) {
           return (
             <div
-            key={index}
+              key={index}
               style={{
                 display: "flex",
                 justifyContent: "center",
-                marginBottom: "5%"
+                marginBottom: "5%",
               }}
             >
               <section className="borderMagenta meaningSection">
@@ -30,15 +30,15 @@ export default function Result(props) {
             </div>
           );
         })}
-          {props.result.phonetics.map(function (phonetic, index) {
-            return (
-              <section className="phoneticSection"  key={index}>
+        {props.result.phonetics.map(function (phonetic, index) {
+          return (
+            <section className="phoneticSection" key={index}>
               <div>
                 <Phonetic phonetic={phonetic} />
               </div>
-              </section>
-            );
-          })}
+            </section>
+          );
+        })}
       </div>
     );
   } else {

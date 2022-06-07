@@ -1,12 +1,19 @@
 import React from "react";
 
 export default function Phonetic(props) {
-  // console.log("PHONNNN", props.phonetic);
+  // console.log("PHON", props.phonetic);
   // console.log("AUDIO", props.phonetic.audio.length);
 
   if (props.phonetic.text) {
     return (
-      <div style={{ display: "flex", justifyContent: "center", marginTop: "0%", color: "white" }}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          marginTop: "0%",
+          color: "white",
+        }}
+      >
         {props.phonetic.audio.length > 0 ? (
           <div>
             <br />
