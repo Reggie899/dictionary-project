@@ -13,3 +13,11 @@ img {
   /* border: 7px solid magenta; */
   margin-top: 28%;
 }
+
+
+@media only screen and (min-width: 768px) {
+    .photoContainer {
+        /* border: 7px solid magenta; */
+        margin-top: 18%;
+      }
+  }
